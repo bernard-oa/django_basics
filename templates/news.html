@@ -1,0 +1,26 @@
+{%extends 'base.html'%} {%block title%}News{%endblock%} {%block body%}
+
+<h1>This is our News Page</h1>
+
+<p>Welcome to our News Page</p>
+
+<h1>{{data.author}}</h1>
+<h2>{{data.title}}</h2>
+<p>{{data.description}}</p>
+<p>{{data.pub_date}}</p>
+
+
+{% comment %} {{list}} <--using a for loop within django -> {% for lang in list
+  %}
+
+  <ul>
+    <li>{{lang}}</li>
+  </ul>
+
+  {% endfor %} {% if mynum == 50%}
+
+  <h1>Condition is True</h1>
+  {% else %}
+  <h1>Condition is false</h1>
+
+  {% endif %} {% endcomment %} {%endblock%}

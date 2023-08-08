@@ -1,0 +1,42 @@
+{%extends 'base.html'%}
+{%block title%}Model Form{%endblock%}
+
+{%block body%}
+
+
+
+<h1>Model Form</h1>
+<form action="{% url 'modelform' %}" method="post">
+
+    {% csrf_token %}
+    <div class="mb-3">
+        <label class="form-label">Username</label>
+        <!-- introducing forms in django-->
+        {{modelform.username}}
+
+    </div>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Password</label>
+        {{modelform.password}}
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Email address</label>
+        {{modelform.email}}
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Phone</label>
+        {{modelform.phone}}
+
+    </div>
+
+    <input type="submit" class="btn btn-success" value="Register" />
+
+
+</form>
+
+
+
+
+{%endblock%}
